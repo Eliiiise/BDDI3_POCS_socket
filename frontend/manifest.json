@@ -1,7 +1,7 @@
 {
   "name": "What Watch",
   "short_name": "WW",
-  "start_url": "/index.html",
+  "start_url": "https://fathomless-ocean-90595.herokuapp.com/",
   "display": "standalone",
   "background_color": "white",
   "theme_color": "white",
