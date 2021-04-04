@@ -4,6 +4,10 @@ var messages = document.getElementById('messages');
 var form = document.getElementById('form');
 var input = document.getElementById('input');
 
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("/serviceWorker.js");
+}
+
 form.addEventListener('submit', function(e) {
   e.preventDefault();
   if (input.value) {

@@ -1,10 +1,6 @@
 const staticCacheName = "cache-v1";
 const assets = ["/", "/index.html"];
 
-if ("serviceWorker" in navigator) {
-    navigator.serviceWorker.register("/serviceWorker.js");
-}
-
 // ajout fichiers en cache
 self.addEventListener("install", (e) => {
   e.waitUntil(
