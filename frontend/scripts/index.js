@@ -23,11 +23,9 @@ socket.on('chat message', function(msg) {
   window.scrollTo(0, document.body.scrollHeight);
 });
 
-console.log(window) 
 
 // Detects if device is on iOS 
 const isIos = () => {
-  console.log("ios")
   const userAgent = window.navigator.userAgent.toLowerCase();
   return /iphone|ipad|ipod/.test( userAgent );
 }
@@ -35,6 +33,11 @@ const isIos = () => {
 const isInStandaloneMode = () => ('standalone' in window.navigator) && (window.navigator.standalone);
 
 // Checks if should display install popup notification:
-if (isIos()) {
+if (isIos() && isInStandaloneMode ) {
   this.setState({ showInstallMessage: true });
+
+  document.body.innerHTML = "<div id='popup'><div class='popup-close-icon'>&times;</div><h4>Add Our App?</h4><p>Tap below to add an icon to your home screen for quick access!</p></div>"
 }
+
+
+
