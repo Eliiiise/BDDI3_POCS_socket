@@ -22,3 +22,6 @@ socket.on('chat message', function(msg) {
   messages.appendChild(item);
   window.scrollTo(0, document.body.scrollHeight);
 });
+
+console.log(window) 
+console.log('test')
