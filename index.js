@@ -5,14 +5,14 @@ const port = process.env.PORT || 3000;
 
 
 /*
-* Redirect to https 
+* Redirect to https
 */
-/*app.get('/', function(req, res) {  
+/*app.get('/', function(req, res) {
   res.redirect('https://' + req.headers.host + req.url);
 })*/
 
 app.all("*", function (req, resp, next) {
-  resp.sendFile(__dirname + '/frontend/' + req.params[0]); // router
+  resp.sendFile(__dirname + req.params[0]); // router
 });
 
 
@@ -26,3 +26,4 @@ io.on('connection', (socket) => {
 http.listen(port, () => {
   console.log(`Socket.IO server running at http://localhost:${port}/`);
 });
+
