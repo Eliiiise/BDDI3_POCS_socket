@@ -23,5 +23,10 @@
     </form>
 
     <script src="public/main.js"></script>
+    <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("./serviceWorker.js");
+    }
+  </script>
   </body>
 </html>
