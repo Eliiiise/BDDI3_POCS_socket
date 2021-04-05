@@ -12,8 +12,6 @@ body { margin: 0; padding-bottom: 3rem; font-family: -apple-system, BlinkMacSyst
 
 #popup {
 	position: relative;
-	bottom: 1000px;
-	left: 13.8%;
 	width: 208px;
 	height: 80px;
 	padding: 10px;
@@ -71,7 +69,7 @@ body { margin: 0; padding-bottom: 3rem; font-family: -apple-system, BlinkMacSyst
 }
 
 .bottom-bar {
-	position: absolute;
+  position: absolute;
   bottom: 8%;
   left: 8px;
 }
