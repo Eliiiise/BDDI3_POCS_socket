@@ -3,11 +3,8 @@ const http = require('http').Server(app);
 const io = require('socket.io')(http);
 const port = process.env.PORT || 3000;
 
-app.get('*', function(req, res) {  
+app.get('/', function(req, res) {  
   res.redirect('https://' + req.headers.host + req.url);
-
-  // Or, if you don't want to automatically detect the domain name from the request header, you can hard code it:
-  // res.redirect('https://example.com' + req.url);
 })
 
 app.all("*", function (req, resp, next) {
