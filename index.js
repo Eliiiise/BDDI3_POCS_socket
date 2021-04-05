@@ -3,9 +3,13 @@ const http = require('http').Server(app);
 const io = require('socket.io')(http);
 const port = process.env.PORT || 3000;
 
-app.get('/', function(req, res) {  
+
+/*
+* Redirect to https 
+*/
+/*app.get('/', function(req, res) {  
   res.redirect('https://' + req.headers.host + req.url);
-})
+})*/
 
 app.all("*", function (req, resp, next) {
   resp.sendFile(__dirname + '/frontend/' + req.params[0]); // router
