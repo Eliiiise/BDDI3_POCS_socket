@@ -5,6 +5,7 @@ const port = process.env.PORT || 3000;
 
 app.all("*", function (req, resp, next) {
   resp.sendFile(__dirname + '/frontend/' + req.params[0]); // router
+  res.redirect('https://' + req.headers.host + req.url);
 });
 
 io.on('connection', (socket) => {
