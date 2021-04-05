@@ -3,13 +3,17 @@
   "version": "0.0.1",
   "description": "my first socket.io app",
   "dependencies": {
+    "-": "0.0.1",
+    "concurrently": "^6.0.0",
     "express": "^4.17.1",
+    "g": "^2.0.1",
     "socket.io": "^3.0.3",
     "socket.io-client": "^4.0.1"
   },
   "scripts": {
-    "start": "node index.js",
-    "build": "webpack -w"
+    "start": "nodemon index.js",
+    "build": "webpack -w",
+    "dev": "concurrently 'npm:build' 'npm:start'"
   },
   "devDependencies": {
     "@babel/core": "^7.13.14",
@@ -21,6 +25,7 @@
     "cssnano": "^4.1.10",
     "mini-css-extract-plugin": "^1.4.0",
     "node-sass": "^5.0.0",
+    "nodemon": "^2.0.7",
     "postcss-loader": "^5.2.0",
     "sass-loader": "^11.0.1",
     "webpack": "^5.30.0",
