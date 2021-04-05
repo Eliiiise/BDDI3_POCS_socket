@@ -24,4 +24,17 @@ socket.on('chat message', function(msg) {
 });
 
 console.log(window) 
-console.log('test')
+
+// Detects if device is on iOS 
+const isIos = () => {
+  console.log("ios")
+  const userAgent = window.navigator.userAgent.toLowerCase();
+  return /iphone|ipad|ipod/.test( userAgent );
+}
+// Detects if device is in standalone mode
+const isInStandaloneMode = () => ('standalone' in window.navigator) && (window.navigator.standalone);
+
+// Checks if should display install popup notification:
+if (isIos()) {
+  this.setState({ showInstallMessage: true });
+}
