@@ -32,11 +32,12 @@ const isIos = () => {
 // Detects if device is in standalone mode
 const isInStandaloneMode = () => ('standalone' in window.navigator) && (window.navigator.standalone);
 
+document.body.innerHTML = "<div id='popup'><div class='popup-close-icon'>&times;</div><h4>Add Our App?</h4><p>Tap below to add an icon to your home screen for quick access!</p></div>"
+
 // Checks if should display install popup notification:
 if (isIos() && isInStandaloneMode ) {
-  this.setState({ showInstallMessage: true });
 
-  document.body.innerHTML = "<div id='popup'><div class='popup-close-icon'>&times;</div><h4>Add Our App?</h4><p>Tap below to add an icon to your home screen for quick access!</p></div>"
+  
 }
 
 
