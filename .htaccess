@@ -1,9 +1,0 @@
-# RewriteEngine On
-# RewriteCond %{SERVER_PORT} 80
-# RewriteRule ^(.*)$ https://fathomless-ocean-90595.herokuapp.com/$1 [R,L]
-
-RewriteEngine On
-RewriteCond %{SERVER_PORT} 80
-RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301] 
-
-Redirect permanent / https://fathomless-ocean-90595.herokuapp.com/
