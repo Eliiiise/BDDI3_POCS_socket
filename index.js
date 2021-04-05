@@ -27,7 +27,7 @@ http.listen(port, () => {
   console.log(`Socket.IO server running at http://localhost:${port}/`);
 
   // Detects if device is on iOS 
-  const isIos = () => {
+  /*const isIos = () => {
     console.log("ios")
     const userAgent = window.navigator.userAgent.toLowerCase();
     return /iphone|ipad|ipod/.test( userAgent );
@@ -38,7 +38,7 @@ http.listen(port, () => {
   // Checks if should display install popup notification:
   if (isIos() && !isInStandaloneMode()) {
     this.setState({ showInstallMessage: true });
-  }
+  }*/
 });
 
 
