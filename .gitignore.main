@@ -3,4 +3,3 @@ src
 .babelrc
 webpack.config.js
 postcss.config.js
-serviceWorker.js
