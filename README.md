@@ -1,3 +1,7 @@
+<a href="https://gitmoji.dev">
+  <img src="https://img.shields.io/badge/gitmoji-%20😜%20😍-FFDD67.svg?style=flat-square" alt="Gitmoji">
+</a>
+
 # chat-example
 
 This is the source code for a very simple chat example used for
