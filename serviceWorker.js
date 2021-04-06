@@ -43,7 +43,7 @@ self.addEventListener("fetch", (event) => {
     }
 });
 
-// supprimer caches
+// supprimer les caches
 self.addEventListener("activate", (e) => {
     e.waitUntil(
         caches.keys().then((keys) => {
