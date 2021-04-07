@@ -4,6 +4,8 @@ const io = require('socket.io')(http);
 const port = process.env.PORT || 3000;
 
 
+app.set('view engine', 'ejs');
+
 /*
 * Redirect to https
 */
@@ -11,10 +13,15 @@ const port = process.env.PORT || 3000;
   res.redirect('https://' + req.headers.host + req.url);
 })*/
 
-app.all("*", function (req, resp, next) {
-  resp.sendFile(__dirname + req.params[0]); // router
+app.get('/', function(req, res) {
+  res.render('pages/index');
 });
 
+app.all("*", function (req, resp, next) {
+  if (req.params[0].substr(-5,5) === '.html') return
+
+  resp.sendFile(__dirname + req.params[0]); // router
+});
 
 
 io.on('connection', (socket) => {
