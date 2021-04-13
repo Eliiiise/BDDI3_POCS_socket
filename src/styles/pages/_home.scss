@@ -27,6 +27,7 @@ body {
     border-radius: 3px;
     outline: none;
     color: #fff;
+    width: 80px;
   }
 }
 
@@ -36,6 +37,7 @@ body {
   flex-grow: 1;
   border-radius: 2rem;
   margin: 0.25rem;
+  width: calc(100% - 80px);
 
   &:focus {
     outline: none;
