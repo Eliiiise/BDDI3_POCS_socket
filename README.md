@@ -2,19 +2,17 @@
   <img src="https://img.shields.io/badge/gitmoji-%20😜%20😍-FFDD67.svg?style=flat-square" alt="Gitmoji">
 </a>
 
-# chat-example
+# POCs
 
+Ce projet de chat en temps réel nous a permis de lever des doutes sur la concrétisation de notre projet. 
 
-This is the source code for a very simple chat example used for
-the [Getting Started](http://socket.io/get-started/chat/) guide
-of the Socket.IO website.
+## Technologies
 
-Please refer to it to learn how to run this application.
+**NodeJS, Socket.io, Express.js** 
 
-You can also spin up a free Heroku dyno to test it out:
+## Hébergement et déploiement 
 
+[Demo](https://fathomless-ocean-90595.herokuapp.com/)  
+
+ 
 [![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/socketio/chat-example)
-
-Or run it on [Repl.it](https://repl.it/):
-
-[![Run on Repl.it](https://repl.it/badge/github/socketio/chat-example)](https://repl.it/github/socketio/chat-example)
