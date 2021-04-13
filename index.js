@@ -25,8 +25,34 @@ app.all("*", function (req, resp, next) {
 
 
 io.on('connection', (socket) => {
-  socket.on('chat message', msg => {
-    io.emit('chat message', msg);
+
+  /**
+   * Utilisateur connecté à la socket
+   */
+  var loggedUser;
+
+
+  socket.on('chat-message', msg => {
+    io.emit('chat-message', msg, loggedUser);
+  });
+
+  socket.on('user-login', user => {
+    // Sauvegarde de l'utilisateur et ajout à la liste des connectés
+    loggedUser = user;
+
+    // Envoi et sauvegarde des messages de service
+    var userServiceMessage = {
+      text: 'You logged in as "' + loggedUser.username + '"',
+      type: 'login'
+    };
+    var broadcastedServiceMessage = {
+      text: 'User "' + loggedUser.username + '" logged in',
+      type: 'login'
+    };
+    socket.emit('service-message', userServiceMessage);
+    socket.broadcast.emit('service-message', broadcastedServiceMessage);
+    // Emission de 'user-login' et appel du callback
+    io.emit('user-login', loggedUser);
   });
 });
 

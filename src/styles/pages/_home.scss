@@ -49,9 +49,20 @@ body {
 
   & > li {
     padding: 0.5rem 1rem;
+    font-size: 16px;
+
+    span {
+      font-weight: bold;
+      background-color: #696edc;
+      color: white;
+      border-radius: 2px;
+      padding: 3px 15px;
+      margin-right: 5px;
+      font-size: 14px;
+    }
 
     &:nth-child(odd) {
-      background: #d4a9ef;
+      background: #eae5f7;
     }
   }
 }
