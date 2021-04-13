@@ -12,7 +12,7 @@ Ce projet de chat en temps réel nous a permis de lever des doutes sur la concr�
 
 ## Hébergement et déploiement 
 
-https://fathomless-ocean-90595.herokuapp.com/  
+[Demo](https://fathomless-ocean-90595.herokuapp.com/)  
 
  
 [![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/socketio/chat-example)
