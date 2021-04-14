@@ -15,16 +15,3 @@ Ce projet de chat en temps rÃ©el nous a permis de lever des doutes sur la concrÃ
 [Demo](https://fathomless-ocean-90595.herokuapp.com/)  
  
 [![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/socketio/chat-example)
-
-
-
-
-
-
-
-=======
-[Demo](https://fathomless-ocean-90595.herokuapp.com/)  
-
- 
-[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/socketio/chat-example)
->>>>>>> 561ecaff50c90b85129dbfa71ab2a1eb00131a92
