@@ -15,7 +15,7 @@ export default class Socket {
             loginButton: document.querySelector('.js-login-button'),
             login: document.querySelector('.js-login'),
             username: document.querySelector('.js-username'),
-            chat: document.querySelector('.js-chat')
+            home: document.querySelector('.js-home')
         };
         this.socket = io()
         this.user = {
@@ -31,10 +31,12 @@ export default class Socket {
     }
 
     initEvents() {
-        this.$els.loginButton.addEventListener('click', this.createProfile);
-        this.$els.form.addEventListener('submit', this.sendMessage);
-        this.socket.on('user-login', this.addProfile);
-        this.socket.on('chat-message', this.createMessage);
+        if(this.$els.loginButton) {
+            this.$els.loginButton.addEventListener('click', this.createProfile);
+            this.$els.form.addEventListener('submit', this.sendMessage);
+            this.socket.on('user-login', this.addProfile);
+            this.socket.on('chat-message', this.createMessage);
+        }
     }
 
     createProfile() {
@@ -43,7 +45,7 @@ export default class Socket {
 
             this.socket.emit('user-login', this.user)
             this.$els.login.classList.add('login--disable')
-            this.$els.chat.classList.remove('chat--disable')
+            this.$els.home.classList.remove('home--disable')
             this.$els.input.focus()
         }
     }
